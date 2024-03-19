@@ -11,10 +11,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.lab04.R;
-import com.example.lab04.databinding.ActivityChatRoomBinding;
-import com.example.lab04.databinding.ReceivedMessageBinding;
-import com.example.lab04.databinding.SentMessageBinding;
+import com.example.newlab4.R;
+import com.example.newlab4.databinding.ActivityMainBinding;
+import com.example.newlab4.databinding.ReceivedMessageBinding;
+import com.example.newlab4.databinding.SentMessageBinding;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -24,7 +24,7 @@ import data.ChatMessage;
 import data.ChatroomViewModel;
 
 public class ChatRoom extends AppCompatActivity {
-    ActivityChatRoomBinding binding;
+    ActivityMainBinding binding;
     ChatroomViewModel chatModel;
     ArrayList<ChatMessage> messages = new ArrayList<>();
 
@@ -34,7 +34,7 @@ public class ChatRoom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityChatRoomBinding.inflate(getLayoutInflater());
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         chatModel = new ViewModelProvider(this).get(ChatroomViewModel.class);
