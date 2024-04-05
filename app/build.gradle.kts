@@ -5,6 +5,7 @@ plugins {
 android {
     namespace = "com.example.lab04"
     compileSdk = 34
+    buildFeatures { viewBinding= true; }
 
     defaultConfig {
         applicationId = "com.example.lab04"
@@ -19,6 +20,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
